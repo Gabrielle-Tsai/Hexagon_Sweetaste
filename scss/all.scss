@@ -1,0 +1,192 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "helpers/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";;
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms/.";
+@import '../node_modules/bootstrap/scss/helpers/.';
+@import '../node_modules/bootstrap/scss/mixins/.';
+@import '../node_modules/bootstrap/scss/bootstrap-utilities';
+@import '../node_modules/bootstrap/scss/vendor/rfs';
+@import '../node_modules/bootstrap/scss/forms';
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/containers";
+
+@mixin setting-bgi($imgURL) {
+    background-image: url($imgURL);
+    background-size: cover;
+    background-position: center center;
+}
+.bg-set {
+    background-size: cover;
+    background-position: center center;
+}
+
+.brand img, .brand {
+    width: 180px;
+    height: 40px;
+}
+.iconLink {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: $spacer*0.25;
+}
+.icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.verticalSlogan {
+    width: 59px;
+    height: 219px;
+}
+.navbar-collapse {
+    @include media-breakpoint-up(lg) {
+        width: fit-content;
+    }
+}
+.bg-banner {
+    background-image: url(https://bit.ly/2OhbMHr);
+    background-position: center;
+    background-size: cover;
+    height: 496px;
+}
+.blur-filter {
+    display: inline-block;
+    width: 100%;
+    height: 256px;
+    box-sizing: border-box;
+    background-color: rgba(63,93,69, 0.8);
+    backdrop-filter: blur(5px);
+    writing-mode: vertical-rl;
+    color: white;
+    transition: 0.3s ease;
+    &:hover {
+        background-color: rgba(255,255,128,0.8);
+        font-weight: bold;
+        color: #3F5D45;
+    }
+    @include media-breakpoint-up(md) {
+        width: 260px;
+    }
+}
+.today-select {
+    @include setting-bgi('https://bit.ly/2R5tqwD');
+    transform: translateY(-89px);
+    margin-right: 1px;
+    width: 100%;
+    max-width: 260px;
+}
+.hot-sale {
+    @include setting-bgi('https://bit.ly/2Dwoxd7');
+    transform: translateY(-89px);
+    margin-right: 1px;
+    color: white;
+    width: 100%;
+    max-width: 260px;
+}
+.new-arrive {
+    @include setting-bgi('https://bit.ly/2OUteif');
+    transform: translateY(-89px);
+    margin-right: 1px;
+    color: white;
+    width: 100%;
+    max-width: 260px;
+}
+.vertical-rl-md {
+    @include media-breakpoint-up(md) {
+        writing-mode: vertical-rl;
+        display: inline-block;
+        img {
+            vertical-align: unset;
+        }
+    }
+}
+
+.intro-row-md {
+    @include media-breakpoint-up(md) {
+        background-color: $light;
+        width: 100%;
+        height: 420px;
+        box-sizing: border-box;
+    }
+}
+.intro-pic-md {
+    @include media-breakpoint-up(md) {
+        display: inline-block;
+        width: 460px;
+        height: 460px;
+        @include setting-bgi('https://bit.ly/2xPn7Eq');
+        background-position: center;
+        position: relative;
+            top: -($spacer);
+    }
+}
+.intro-pic2 {
+    @include setting-bgi('https://bit.ly/2zzAQS4');
+}
+.intro-title-md {
+    @include media-breakpoint-up(md) {
+        height: 307px;
+        width: 89px;
+        position: relative;
+            top: -($spacer);
+    }
+}
+.card-img-top {
+    height: 315px;
+    width: 100%;
+}
+.product-pic {
+    width: 100%;
+    height: 315px;
+    position: relative;
+    &::before{
+        position: absolute;
+            left: 20px;
+        width: 36px;
+        height: 107px;
+            background-color: $primary;
+        padding: 10px;
+        content: '本日精選';
+        writing-mode: vertical-rl;
+        font-size: $font-size-base;
+        color: $light;
+        text-align: center;
+        line-height: 1;
+    }
+}
+.like {
+    position: absolute;
+        top: 19px;
+        right: 22px;
+    &:hover {
+        cursor: pointer;
+    }
+}
