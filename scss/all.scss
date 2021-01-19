@@ -77,15 +77,32 @@
 }
 //主視覺設定
 .bg-banner {
-    background-image: url(https://bit.ly/2OhbMHr);
-    background-position: center;
+    height: 277px;
+    @include media-breakpoint-up(md){
+        height: 496px;
+    }
+    background-image: none;
+    background-position: center center;
     background-size: cover;
-    height: 496px;
+    position: relative;
+    img {
+        height: 218px;
+        width: 59px;
+        position: absolute;
+            top: 30px;
+            right: 30px;
+        @include media-breakpoint-up(md){
+            height: 327px;
+            width: 89px;
+            top: 40px;
+            right: 40px;
+        }
+    }
 }
 .blur-filter {
     display: inline-block;
     width: 100%;
-    height: 256px;
+    height: 180px;
     box-sizing: border-box;
     background-color: rgba(63,93,69, 0.8);
     backdrop-filter: blur(5px);
@@ -99,30 +116,43 @@
     }
     @include media-breakpoint-up(md) {
         width: 260px;
+        height: 256px;
     }
 }
 .today-select {
     @include setting-bgi('https://bit.ly/2R5tqwD');
-    transform: translateY(-89px);
+    @include media-breakpoint-up(md){
+        transform: translateY(-89px);
+        height: 256px;
+    }
     margin-right: 1px;
     width: 100%;
     max-width: 260px;
+    height: 180px;
 }
 .hot-sale {
     @include setting-bgi('https://bit.ly/2Dwoxd7');
-    transform: translateY(-89px);
+    @include media-breakpoint-up(md){
+        transform: translateY(-89px);
+        height: 256px;
+    }
     margin-right: 1px;
     color: white;
     width: 100%;
     max-width: 260px;
+    height: 180px;
 }
 .new-arrive {
     @include setting-bgi('https://bit.ly/2OUteif');
-    transform: translateY(-89px);
+    @include media-breakpoint-up(md){
+        transform: translateY(-89px);
+        height: 256px;
+    }
     margin-right: 1px;
     color: white;
     width: 100%;
     max-width: 260px;
+    height: 180px;
 }
 //直式排版
 .vertical-rl-md {
@@ -179,11 +209,14 @@
     @include setting-bgi('https://bit.ly/2zzAQS4');
 }
 .intro-title-md {
+    height: 218px;
+    width: 59px;
     @include media-breakpoint-up(md) {
-        height: 307px;
+        height: 327px;
         width: 89px;
         position: relative;
-            top: -($spacer);
+        top: -($spacer);
+        right: 40px;
     }
 }
 //產品卡片設定

@@ -1,3 +1,17 @@
+var banner = document.getElementsByClassName('bg-banner');
+var checkPage = banner[0].getAttribute('id');
+var changebg = document.getElementById(checkPage);
+console.log(changebg);
+switch(checkPage) {
+    case "indexBanner":
+        changebg.style['background-image'] = 'url(https://bit.ly/2OhbMHr)';
+        break;
+    case "productBanner":
+        changebg.style['background-image'] = 'url(images/productBanner.jfif)';
+        break;
+
+}
+
 var heart = document.getElementsByClassName('likeBtn');
 for (i=0; i<heart.length; i++){
     heart[i].addEventListener('click', function (){
@@ -9,17 +23,4 @@ for (i=0; i<heart.length; i++){
             this.setAttribute('class', 'likeBtn');
         }
     },false);
-}
-
-var banner = document.getElementsByClassName('bg-banner');
-var checkPage = banner[0].getAttribute('id');
-var changebg = document.getElementById(checkPage);
-console.log(changebg);
-switch(checkPage) {
-    case "indexBanner":
-        break;
-    case "productBanner":
-        changebg.style['background-image'] = 'url(images/productBanner.jfif)';
-        break;
-
 }
