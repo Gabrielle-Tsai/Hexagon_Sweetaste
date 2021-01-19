@@ -37,6 +37,7 @@
 @import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/containers";
 
+//產品圖片背景化設定
 @mixin setting-bgi($imgURL) {
     background-image: url($imgURL);
     background-size: cover;
@@ -46,11 +47,12 @@
     background-size: cover;
     background-position: center center;
 }
-
+//Logo大小設定
 .brand img, .brand {
     width: 180px;
     height: 40px;
 }
+//購物車圖示設定
 .iconLink {
     display: inline-block;
     width: 32px;
@@ -62,15 +64,18 @@
     width: 40px;
     height: 40px;
 }
+//介紹標題直式設定
 .verticalSlogan {
     width: 59px;
     height: 219px;
 }
+//選單設定
 .navbar-collapse {
     @include media-breakpoint-up(lg) {
         width: fit-content;
     }
 }
+//主視覺設定
 .bg-banner {
     background-image: url(https://bit.ly/2OhbMHr);
     background-position: center;
@@ -119,7 +124,9 @@
     width: 100%;
     max-width: 260px;
 }
+//直式排版
 .vertical-rl-md {
+    writing-mode: horizontal-tb;
     @include media-breakpoint-up(md) {
         writing-mode: vertical-rl;
         display: inline-block;
@@ -130,25 +137,45 @@
 }
 
 .intro-row-md {
+    background-color: $light;
+    width: 100%;
     @include media-breakpoint-up(md) {
-        background-color: $light;
-        width: 100%;
         height: 420px;
         box-sizing: border-box;
     }
 }
+//橫式排版設定
+.horizontal-title{
+    margin-bottom: $spacer *2;
+    img {
+        width: 196px;
+        height: 60px;
+    }   
+}
+//介紹內容配圖
+.intro-pic {
+    width: 100%;
+    height: 250px;
+    @include setting-bgi('https://bit.ly/2xPn7Eq');
+}
+.intro-pic2 {
+    width: 100%;
+    height: 250px;
+    @include setting-bgi('https://bit.ly/2zzAQS4');
+}
 .intro-pic-md {
+    display: none;
     @include media-breakpoint-up(md) {
         display: inline-block;
         width: 460px;
         height: 460px;
-        @include setting-bgi('https://bit.ly/2xPn7Eq');
-        background-position: center;
         position: relative;
-            top: -($spacer);
+        top: -($spacer);
     }
+    @include setting-bgi('https://bit.ly/2xPn7Eq');
 }
-.intro-pic2 {
+.intro-pic2-md{
+    @extend .intro-pic-md;
     @include setting-bgi('https://bit.ly/2zzAQS4');
 }
 .intro-title-md {
@@ -159,30 +186,15 @@
             top: -($spacer);
     }
 }
+//產品卡片設定
 .card-img-top {
     height: 315px;
     width: 100%;
 }
-.product-pic {
-    width: 100%;
-    height: 315px;
-    position: relative;
-    &::before{
-        position: absolute;
-            left: 20px;
-        width: 36px;
-        height: 107px;
-            background-color: $primary;
-        padding: 10px;
-        content: '本日精選';
-        writing-mode: vertical-rl;
-        font-size: $font-size-base;
-        color: $light;
-        text-align: center;
-        line-height: 1;
-    }
-}
-.like {
+//加入最愛 toggle
+.likeBtn {
+    width: 20px;
+    height: 20px;
     position: absolute;
         top: 19px;
         right: 22px;
@@ -190,3 +202,8 @@
         cursor: pointer;
     }
 }
+.liked{
+    @extend .likeBtn;
+}
+
+@import 'helpers/customComponents';//Product Card

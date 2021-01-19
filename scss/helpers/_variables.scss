@@ -68,6 +68,7 @@ $warning:       #ffe180 !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$soft:          #8da291 !default;
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
@@ -79,7 +80,7 @@ $theme-colors: (
   "danger":     $danger,
   "light":      #eaf0ed,
   "dark":       $dark,
-  "soft":       #8DA291,
+  "soft":       $soft,
 
 )!default;
 // scss-docs-end theme-colors-map
