@@ -10,3 +10,16 @@ for (i=0; i<heart.length; i++){
         }
     },false);
 }
+
+var banner = document.getElementsByClassName('bg-banner');
+var checkPage = banner[0].getAttribute('id');
+var changebg = document.getElementById(checkPage);
+console.log(changebg);
+switch(checkPage) {
+    case "indexBanner":
+        break;
+    case "productBanner":
+        changebg.style['background-image'] = 'url(images/productBanner.jfif)';
+        break;
+
+}
