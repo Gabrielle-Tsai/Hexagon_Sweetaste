@@ -174,14 +174,6 @@
         box-sizing: border-box;
     }
 }
-//橫式排版設定
-.horizontal-title{
-    margin-bottom: $spacer *2;
-    img {
-        width: 196px;
-        height: 60px;
-    }   
-}
 //介紹內容配圖
 .intro-pic {
     width: 100%;
@@ -209,15 +201,21 @@
     @include setting-bgi('https://bit.ly/2zzAQS4');
 }
 .intro-title-md {
-    height: 218px;
-    width: 59px;
     @include media-breakpoint-up(md) {
         height: 327px;
         width: 89px;
         position: relative;
         top: -($spacer);
-        right: 40px;
     }
+}
+
+//橫式排版設定
+.horizontal-title{
+    margin-bottom: $spacer *2;
+    img {
+        width: 196px;
+        height: 60px;
+    }   
 }
 //產品卡片設定
 .card-img-top {

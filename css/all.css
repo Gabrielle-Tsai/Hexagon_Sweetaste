@@ -13090,15 +13090,6 @@ fieldset:disabled .btn {
   }
 }
 
-.horizontal-title {
-  margin-bottom: 2.5rem;
-}
-
-.horizontal-title img {
-  width: 196px;
-  height: 60px;
-}
-
 .intro-pic {
   width: 100%;
   height: 250px;
@@ -13138,19 +13129,22 @@ fieldset:disabled .btn {
   background-position: center center;
 }
 
-.intro-title-md {
-  height: 218px;
-  width: 59px;
-}
-
 @media (min-width: 768px) {
   .intro-title-md {
     height: 327px;
     width: 89px;
     position: relative;
     top: -1.25rem;
-    right: 40px;
   }
+}
+
+.horizontal-title {
+  margin-bottom: 2.5rem;
+}
+
+.horizontal-title img {
+  width: 196px;
+  height: 60px;
 }
 
 .card-img-top {
@@ -13173,6 +13167,8 @@ fieldset:disabled .btn {
 .product-card {
   width: 315px;
   border: 1px solid #EAF0ED;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 1.875rem;
   color: #3F5D45;
   font-size: 14px;
@@ -13234,8 +13230,10 @@ fieldset:disabled .btn {
 .product-card .product-table tr td {
   padding: 14px;
   text-align: center;
-  border-right: 1px solid;
-  border-color: #EAF0ED;
+}
+
+.product-card .product-table tr :nth-child(1) {
+  border-right: 1px solid #EAF0ED;
 }
 
 .product-card .product-table tr :nth-child(2) {

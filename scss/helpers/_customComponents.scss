@@ -6,6 +6,7 @@
         max-width: 300px;
     }
     border: 1px solid #EAF0ED;
+    box-sizing: border-box;
     margin-bottom: $spacer *1.5;
     @include media-breakpoint-up(lg){
         margin-bottom: $spacer;
@@ -46,8 +47,9 @@
             td {
                 padding: 14px;
                 text-align: center;
-                border-right: 1px solid;
-                border-color: #EAF0ED;
+            }
+            :nth-child(1){
+                border-right: 1px solid #EAF0ED;
             }
             :nth-child(2){
                 font-weight: bold;
