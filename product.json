@@ -1,0 +1,8 @@
+{
+    "product": [
+        {"name": "春梅朔雪", "price": 450, "codename": 1001, "picURL": "https://bit.ly/2QvsT63"},
+        {"name": "焦糖馬卡龍", "price": 450, "codename": 10001, "picURL": "https://bit.ly/2zBjQuq"},
+        {"name": "莓果磅蛋糕", "price": 450, "codename": 10002, "picURL":"https://bit.ly/2zBDAxX"},
+        {"name": "莓果歡樂派", "price": 450, "codename": 10003, "picURL": "https://bit.ly/2zKOP7w"},
+    ]
+} 
