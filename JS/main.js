@@ -1,20 +1,20 @@
 var banner = document.getElementsByClassName('bg-banner');
-switch(banner){
-    case true:
-        var checkPage = banner[0].getAttribute('id');
-        var changebg = document.getElementById(checkPage);
-        console.log(changebg);
-        switch(checkPage) {
-            case "indexBanner":
-                changebg.style['background-image'] = 'url(https://bit.ly/2OhbMHr)';
-                break;
-            case "productBanner":
-                changebg.style['background-image'] = 'url(images/productBanner.jfif)';
-                break;
-        }
-    break;
-    case false:
-        break;
+if(banner){
+    var checkPage = banner[0].getAttribute('id');
+    var changebg = document.getElementById(checkPage);
+    switch(checkPage) {
+        case "indexBanner":
+            changebg.style['background-image'] = 'url(https://bit.ly/2OhbMHr)';
+            break;
+        case "productBanner":
+            changebg.style['background-image'] = 'url(images/productBanner.jfif)';
+            break;
+        case "checkout-success-banner":
+            changebg.style['background-image'] = 'url(https://bit.ly/2P7GhNd)';
+            changebg.style['height'] = '460px';
+            break;
+    }
+    }else{
 }
 
 var heart = document.getElementsByClassName('likeBtn');

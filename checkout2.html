@@ -37,7 +37,19 @@
         <div class="row">
             <div class="col-lg-8 col-12">
                 <form action="#" class="bg-primary p-4 fw-bold text-light">
-                    <h2 class="text-light fs-1 fw-bold">付款</h2>
+                    <div class="d-flex justify-content-between mb-3">
+                        <h2 class="text-light fs-1 fw-bold">付款</h2>
+                        <!-- 進度條 -->
+                        <table class="mt-2">
+                            <tr>
+                                <td><i class="fas fa-check-circle text-light fa-lg"></i></td>
+                                <td><div class="step-line border-bottom border-light"></div></td>
+                                <td><i class="far fa-dot-circle text-light fa-lg"></i></td>
+                                <td><div class="step-line border-bottom border-light"></div></td>
+                                <td><i class="far fa-circle text-light fa-lg"></i></td>
+                            </tr>
+                        </table>
+                    </div>
                     <div class="row">
                         <div class="col-12">
                             <label for="creditNum" class="form-label">信用卡卡號</label>

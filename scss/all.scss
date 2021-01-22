@@ -88,14 +88,9 @@
     img {
         height: 218px;
         width: 59px;
-        position: absolute;
-            top: 30px;
-            right: 30px;
         @include media-breakpoint-up(md){
             height: 327px;
             width: 89px;
-            top: 40px;
-            right: 40px;
         }
     }
 }
@@ -235,6 +230,10 @@
 }
 .liked{
     @extend .likeBtn;
+}
+.step-line {
+    width: 66px;
+    height: 1px;
 }
 
 @import 'helpers/customComponents';//Product Card
