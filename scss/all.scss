@@ -81,7 +81,7 @@
     @include media-breakpoint-up(md){
         height: 496px;
     }
-    background-image: url('images/default.svg');
+    background-image: none;
     background-position: center center;
     background-size: cover;
     position: relative;
