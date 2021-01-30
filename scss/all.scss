@@ -75,13 +75,13 @@
         width: fit-content;
     }
 }
-//主視覺設定
+//主視覺橫幅設定
 .bg-banner {
     height: 277px;
     @include media-breakpoint-up(md){
         height: 496px;
     }
-    background-image: none;
+    background-image: url('images/default.svg');
     background-position: center center;
     background-size: cover;
     position: relative;
