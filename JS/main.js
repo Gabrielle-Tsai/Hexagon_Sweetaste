@@ -16,6 +16,7 @@ if(banner.length > 0){
     }
 }
 var heart = document.getElementsByClassName('likeBtn');
+if(heart.length > 0){
 for (i=0; i<heart.length; i++){
     heart[i].addEventListener('click', function (){
         if(this.className === 'likeBtn'){
@@ -26,7 +27,7 @@ for (i=0; i<heart.length; i++){
             this.setAttribute('class', 'likeBtn');
         }
     },false);
-}
+}}
 var imgCol = document.getElementsByClassName('product-img');
 if(imgCol.length > 0) {
 for (i=0; i< imgCol.length; i++){
