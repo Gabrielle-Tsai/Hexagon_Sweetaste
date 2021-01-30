@@ -7,7 +7,7 @@ if(banner.length > 0){
             changebg.style['background-image'] = 'url(https://bit.ly/2OhbMHr)';
             break;
         case "productBanner":
-            changebg.style['background-image'] = 'url(images/productBanner.jpg)';
+            changebg.style['background-image'] = 'url(https://imgur.com/abQ2u4G)';
             break;
         case "checkout-success-banner":
             changebg.style['background-image'] = 'url(https://bit.ly/2P7GhNd)';
